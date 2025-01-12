@@ -32,6 +32,17 @@ There are many platforms that can be built on top of Solid, that may be research
 
 A potential research proposal related these topics can be found [here](https://github.com/solid/research-topics/blob/main/privacy-preserving-query.pdf)
 
+**Aggregators / Indexes**
+
+Ideally, the following use cases should be enabled:
+ - I want to be able to query all public triples across all Pods on the web from a single endpoint
+ - I also want to be able to query across some protected triples when providing authentication to the indexing service either because:
+   - The aggregators is a trusted intermediary for handling private data
+   - E2EE encryption is used so that the aggregator does not need to be trusted
+
+In both cases, ideally provenance would be available to prove the integrity of the data in the aggregator without needing to trust said aggregator.
+
+
 **Web Agents**
 
 - Building specifications for (Semantic) Web agents that operate over Pods  
@@ -82,6 +93,7 @@ A potential research proposal related these topics can be found [here](https://g
 **Data Generation**
 
 - Automated data creation with LLMs: Many companies are now having commercial success in generating Knowledge Graphs from unstructured, or semi-structured documents such as PDFs. There are a range of research projects to make systems that convert existing data sources into structured RDF to use with applications.
+
 
 
 **Related to / extending existing work in academia**
