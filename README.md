@@ -42,6 +42,7 @@ Ideally, the following use cases should be enabled:
 
 In both cases, ideally provenance would be available to prove the integrity of the data in the aggregator without needing to trust said aggregator.
 
+@jacksoncreed has [these slides](./SearcherCentricSearch.pdf) on the topic.
 
 **Web Agents**
 
@@ -93,8 +94,6 @@ In both cases, ideally provenance would be available to prove the integrity of t
 **Data Generation**
 
 - Automated data creation with LLMs: Many companies are now having commercial success in generating Knowledge Graphs from unstructured, or semi-structured documents such as PDFs. There are a range of research projects to make systems that convert existing data sources into structured RDF to use with applications.
-
-
 
 **Related to / extending existing work in academia**
 
