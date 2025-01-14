@@ -10,18 +10,18 @@ To get us started this is a dump of topics in a single file - the goal is to mak
 
 ## Topics
 
-**Data governance and Solid**  
+### Data governance and Solid
 There is a need to make Solid easier for Industry and Governments globally to adopt within their [**Enterprise Data Governance (EDG)**](https://www.sap.com/products/technology-platform/master-data-governance/what-is-data-governance.html) and broader [**Enterprise Information Governance (EIG)**](https://www.nyu.edu/life/information-technology/data-services-and-analytics/global-privacy-and-data-strategy/enterprise-information-governance-and-management.html) strategies. The research challenge within *academia* and *industry* to add **automated EDG support** to Solid. In academia, [Harshvardhan J. Pandit](https://harshp.com/) at [Dublin City University](https://www.dcu.ie/) and [Beatriz Esteves](https://www.linkedin.com/in/beatriz-esteves-032249156/) at [SolidLab](https://solidlab.be/) have expertise with [ODRL](https://www.w3.org/TR/odrl-model/) and [DPV](https://w3c.github.io/dpv/2.0/dpv/) which may be key components of a semi-automated data governance layer for Solid. In the Dataspace Community [**IDSA**](https://internationaldataspaces.org/) uses [ODRL](https://www.w3.org/TR/odrl-model/) as a [key component](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/overview/terminology#agreement) of [their standard](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol) to establish agreements for [sharing datasets](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/overview/terminology#dataset) \- and thus would be a valuable partner. EIG, a superset of EDG, must be carefully considered. With [infrastructure providers for Solid](https://solidproject.solidcommunity.net/catalog/) acting as [Data Trusts](https://theodi.org/insights/explainers/what-is-a-data-trust/), and an expectation that **government** and **enterprises** migrate to read/write personal data from Pods, there is a need to proactively provide support for these organisations to manage the implications for their EIG strategies. In particular, we need to create a generic, Solid compatible, EIG strategy. Josh Cornejo recently presented some work around this topic to the Solid Practitioners channel in [https://spectra.video/w/21t7aswEMXkUCjzHsB8CLa](https://spectra.video/w/21t7aswEMXkUCjzHsB8CLa).
 
 There is lots of technical and non-technical research to be done around this. To get a flavour of such research see [this proposal](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit).
 
-**Platforms on top of Solid**  
+### Platforms on top of Solid
 There are many platforms that can be built on top of Solid, that may be research projects of their own right, or be built as part of other projects.
 
 - Research and data analytics platforms on top of Solid such as a platform for researchers to define the parameters of a dataset they need to do, e.g. population analysis, or to virtualise datasets to train ML algorithms. I would that that of interest to some of the research team at the Open Data Institute would be to have a platform that generates ML training sets annotated [Croissant metadata](https://research.google/blog/croissant-a-metadata-format-for-ml-ready-datasets/).  
 - Consent collection/management platform similar to [ConsentKit](https://consentkit.com).
 
-**Privacy Enhancing Technologies & Solid**:
+### Privacy Enhancing Technologies & Solid
 
 - Using zero-knowledge proofs for automated data-minimisation when sharing. Zero knowledge proofs can enable *selective disclosure* and *derived disclosure* of signed data. Selective disclosure is sharing a subset of signed attributes, derived disclosure is proving that a property can be derived from a set of signed facts (e.g. I can prove that I am over 21 to a bar using a government signed statement about my DOB, without disclosing my DOB to the bar). Whilst both are used heavily in modern digital wallet solutions, usually as part of [Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) \- however, there is currently lots of custom code that needs to be written to perform and verify the derivation. It would be useful to Solid and a range of other efforts to be able to generate derived data \+ proof on demand when data is query (e.g. deriving age \+ proof from DOB \+ signature when querying for foaf:age in a database).
    - **Jesse Wright (@jeswr) has started work on this topic at [https://github.com/jeswr/queryable-credentials](https://github.com/jeswr/queryable-credentials)**.  
@@ -32,7 +32,7 @@ There are many platforms that can be built on top of Solid, that may be research
 
 A potential research proposal related these topics can be found [here](https://github.com/solid/research-topics/blob/main/privacy-preserving-query.pdf)
 
-**Aggregators / Indexes**
+### Aggregators / Indexes
 
 Ideally, the following use cases should be enabled:
  - I want to be able to query all public triples across all Pods on the web from a single endpoint
@@ -44,37 +44,37 @@ In both cases, ideally provenance would be available to prove the integrity of t
 
 @jacksoncreed has [these slides](./SearcherCentricSearch.pdf) on the topic.
 
-**Web Agents**
+### Web Agents
 
 - Building specifications for (Semantic) Web agents that operate over Pods  
 - Resolution mechanisms for agents operation on different logical assumptions  
 - Collaborate on emergent research on LLMs looking up external data as part of their evaluation process (this is *not* RAG, it is architecturally building data lookup into the LLM) 
 
-**Data management**
+### Data management
 
 - [CRDTs](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) (conflict-free replicated datatypes) support local-first and collaborative application by providing resolution mechanisms . A W3C community group has been established to work on the development of [RDF specific CRDT algorithms](https://www.w3.org/community/crdt4rdf/). 
 
-**Private Data and LLMs**
+### Private Data and LLMs
 
 - There is a range of technical and research work to be done around knowledge graphs, private data and LLMs. On the more technical front there is work to do such as implementing the [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) for Solid. Also note that perplexity acquired [Carbon](https://www.perplexity.ai/hub/blog/welcoming-carbon-to-the-perplexity-team) to provider similar functionality to LLMs.
 
   On the more research side, there is work to e.g. see if we should be adding vector database type access to Solid, and whether, e.g., we can be assigning entities points in vector space and doing similarity searches on entities. What applications can be built on top of this?
 
-**Tooling to assist data management**
+### Tooling to assist data management
 
 - A tool to warn me of potential outcomes \- especially harmful outcomes \- of changing data, or permissions on data. For instance, warn me that I might my Visa to live in the UK if I change my address to an Australian address for more than 3 months \- because the immigrations office has access to that address.
 
-**Developer Experience**
+### Developer Experience
 
 - There is extensive work on tooling for RDF, with varying degrees of abstractions and interaction patterns. Just a few of such abstractions can be found at [https://rdfjs.dev/](https://rdfjs.dev/); yet we still aren’t at the point where way can say “Hey, so you’re a front end developer you want to build a Solid application in Domain X, here is how you can get up and running in only 2 hours; and not have to worry about data modelling or management, that’s all handled”. We need to get to that point for Solid in order to get a critical mass of developer building Solid applications.
 
-**Design Patterns**
+### Design Patterns
 
 - Part of the reason that Solid lacks good educational materials for many topics, is a result of a lack of generally accepted design patterns to solve many challenges. This includes:  
   - Standards for provenance, and provenance validation. There are many scenarios in which services and applications need to establish a basis on which they can trust \- such as having the data signed by a trusted organisation. Currently there are no well-accepted standards for how to sign and verify such data in Solid.  
   - Best practices for data access requests. Access requests have been implemented in multiple ways across different projects and servers. There is a need to critically evaluate the different design patterns and propose a single flow as a use-case.
 
-**Social Science Research**
+### Social Science Research
 
 - What do people want the future of their technologies and online experiences look like?  
 - Downstream effects of amendments to data:  if he were to update that address in Solid, and DVLA had access \- what would the impact of that be? (*Note that this complements the development of the tooling to assist data management*).
@@ -83,19 +83,19 @@ In both cases, ideally provenance would be available to prove the integrity of t
 
 - How does Solid relate to the concept of a [data mesh](https://www.datamesh-architecture.com). Is there feature parity? What are the gaps if any?
 
-**What data can I trust?**
+### What data can I trust?
 
 - Just as with the Semantic Web “anyone can say anything about anything”, so just as with the Web, you cannot take every piece of information in everyones Pod to be true. How can applications use provenance (computational trust) \+ assumptions / guarantees of what entities are trustworthy to establish what data to “believe” for a given application. To put it another way, can I execute a SPARQL query, which evaluates over data deemed “trustworthy” based on the provenance presented, and trust assumptions given to the query engine.
 
-**Ontology Creation**
+### Ontology Creation
 
 - Automated ontology creation with LLMs: There is research taking place to [Map the Mind of Large Language Models](https://www.anthropic.com/research/mapping-mind-language-model) \- with this, there is an opportunity to automatically create ontologies for new or niche domains. This is done by generating an approximate logical representation of the conceptual worldview encoded in LLMs.
 
-**Data Generation**
+### Data Generation
 
 - Automated data creation with LLMs: Many companies are now having commercial success in generating Knowledge Graphs from unstructured, or semi-structured documents such as PDFs. There are a range of research projects to make systems that convert existing data sources into structured RDF to use with applications.
 
-**Related to / extending existing work in academia**
+### Related to / extending existing work in academia
 
 - Working on the development of Malleable Software on top of Solid. Malleable Software was the topic of [Geoffrey Litt](https://www.geoffreylitt.com)’s PhD at CSAIL \- I’m not sure if there is anyone currently working on this topic in CSAIL, it looks like Prof. Daniel Jackson might be with his [Wildcard](https://www.csail.mit.edu/research/wildcard) project and Prof. David Karger is interested in such topics with [Mavo](https://www.csail.mit.edu/research/mavo-creating-interactive-data-driven-web-applications-authoring-html). There has long been an item on the Solid Roadmap to integrate Solid with Malvo as a research item in the Solid Ecosystem roadmap.
   - Work so far: Syntropize https://syntropize.com is a proof-of-concept malleable software operating environment by Rahul Gupta that uses Solid PODs when storing data online.
