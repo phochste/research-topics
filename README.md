@@ -44,6 +44,10 @@ In both cases, ideally provenance would be available to prove the integrity of t
 
 @jacksoncreed has [these slides](./SearcherCentricSearch.pdf) on the topic.
 
+### Interfaces on top of aggregators
+
+ - WebId search: Discover the WebId of someone I know
+
 ### Web Agents
 
 - Building specifications for (Semantic) Web agents that operate over Pods  
